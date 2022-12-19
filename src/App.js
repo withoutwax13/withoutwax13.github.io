@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react"
+import Canvas from "./components/Canvas"
+import Header from "./components/Header"
 
-function App() {
+const App = () => {
+  const [navSelection, setNavSelection] = useState(0) // to determine which header navlink is active; default should be the Home page as 0
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header setSelection={setNavSelection}/>
+      <Canvas/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
