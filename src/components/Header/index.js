@@ -7,9 +7,10 @@ const Desktop = ({setSelection}) => {
             position: 'absolute',
             width: '100%',
             color: 'white',
+            marginBottom: "0px"
           }} minWidth='max-content' alignItems='center' gap='2'>
             <Box p='2'>
-            <Heading size='lg' as='h1' style={{marginLeft: '30px', cursor: "pointer"}} onClick={()=>setSelection(0)}>
+            <Heading size='lg' as='h1' style={{marginLeft: '38px', cursor: "pointer"}} onClick={()=>setSelection(0)}>
                 <img src={require("../../assets/icons/JPV.png")} style={{height: '60px'}}/>
             </Heading>
             </Box>
@@ -31,9 +32,10 @@ const NonDesktop = ({setSelection}) => {
             position: 'absolute',
             width: '100%',
             color: 'white',
+            marginBottom: "0px"
           }} minWidth='max-content' alignItems='center' gap='2'>
             <Box p='2'>
-            <Heading size='lg' as='h1' style={{marginLeft: '30px', cursor: "pointer"}} onClick={()=>setSelection(0)}>
+            <Heading size='lg' as='h1' style={{marginLeft: '38px', cursor: "pointer"}} onClick={()=>setSelection(0)}>
                 <img src={require("../../assets/icons/JPV.png")} style={{height: '60px'}}/>
             </Heading>
             </Box>
