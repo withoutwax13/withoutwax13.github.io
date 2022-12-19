@@ -1,0 +1,25 @@
+{
+  "short_name": "John Patrick Valera",
+  "name": "John Patrick Valera | Full Stack Web Developer",
+  "icons": [
+    {
+      "src": "JPV.png",
+      "sizes": "400x225 400x225 400x225 400x225",
+      "type": "image/png"
+    },
+    {
+      "src": "JPV.png",
+      "type": "image/png",
+      "sizes": "400x225"
+    },
+    {
+      "src": "JPV.png",
+      "type": "image/png",
+      "sizes": "400x225"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
