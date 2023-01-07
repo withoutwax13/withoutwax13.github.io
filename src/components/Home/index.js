@@ -37,10 +37,10 @@ const NonDesktop = ({setSelection}) => {
 
 const Home = ({setSelection}) => {
     var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    const renderHeader = () => {
+    const renderHome = () => {
         return deviceWidth > 1280 ? <Desktop setSelection={setSelection}/> : <NonDesktop setSelection={setSelection}/>
     }
-    return renderHeader()
+    return renderHome()
 }
 
 export default Home;
