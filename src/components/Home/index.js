@@ -22,16 +22,21 @@ const Desktop = ({setSelection}) => {
 
 const NonDesktop = ({setSelection}) => {
     return (
-        <div style={{
+        <Stack style={{
             zIndex: '5',
             position: 'absolute',
-            width: '100%',
             color: 'white',
-            marginTop: "100px",
+            marginLeft: "20px",
+            marginTop: "123px",
             paddingTop: "0",
           }}>
-            <h1 style={{color: "white"}}>Home Smaller Devices</h1>
-        </div>
+            <Heading as="h1" fontSize="30px" fontFamily="Calibri" margin="0px" style={{color: "white"}}>I am John Patrick Valera.</Heading>
+            <Heading as="h2" fontSize="30px" margin="0px" fontFamily="Calibri" style={{color: "#8591BB"}}>I build web solutions.</Heading>
+            <Heading as="h3" fontSize='30px' margin="0px" fontFamily="Calibri" style={{color: "#606A8B"}}>I am a full stack developer.</Heading>
+            <Button onClick={()=>setSelection(3)} width="200px" height="51px" backgroundColor="transparent" color="white" style={{cursor: "pointer", borderColor: "white", borderRadius: '5px', borderWidth: "3px", margin: "50px 0"}}>
+                <Heading as="h4" fontSize="15px">CHECK MY PORTFOLIO</Heading>
+            </Button>
+        </Stack>
     )
 }
 
