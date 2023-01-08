@@ -11,15 +11,15 @@ const Desktop = ({setSelection}) => {
           }} minWidth='max-content' alignItems='center' gap='2'>
             <Box p='2'>
             <Heading size='lg' as='h1' style={{marginLeft: '38px', cursor: "pointer"}} onClick={()=>setSelection(0)}>
-                <img src={require("../../assets/icons/JPV.png")} style={{height: '60px'}}/>
+                <img src={require("../../assets/icons/JPV.png")} alt="website logo" style={{height: '40px'}}/>
             </Heading>
             </Box>
             <Spacer />
             <ButtonGroup gap='2'>
-                <Link style={{margin: '30px', cursor: "pointer"}} onClick={()=>setSelection(1)}>About</Link>
-                <Link style={{margin: '30px', cursor: "pointer"}} onClick={()=>setSelection(2)}>Experience</Link>
-                <Link style={{margin: '30px', cursor: "pointer"}} onClick={()=>setSelection(3)}>Projects</Link>
-                <Link style={{margin: '30px', cursor: "pointer"}} onClick={()=>setSelection(4)}>Resume</Link>
+                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600'}} onClick={()=>window.open("https://jpvalera.carrd.co/")}>About</Link>
+                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600'}} onClick={()=>setSelection(2)}>Experience</Link>
+                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600'}} onClick={()=>setSelection(3)}>Projects</Link>
+                <Link style={{margin: '30px', cursor: "pointer", color:'black', background: 'white', borderColor: 'white', paddingLeft: '5px', paddingRight: '5px', textDecoration: 'none', fontWeight: '600'}} href="mailto:johnpatrickyusoresvalera@gmail.com">CONTACT</Link>
             </ButtonGroup>
         </Flex>
     )
@@ -28,7 +28,7 @@ const Desktop = ({setSelection}) => {
 const NonDesktop = ({setSelection}) => {
     return (
         <Flex style={{
-            zIndex: '5',
+            zIndex: '10',
             position: 'absolute',
             width: '100%',
             color: 'white',
@@ -36,19 +36,19 @@ const NonDesktop = ({setSelection}) => {
           }} minWidth='max-content' alignItems='center' gap='2'>
             <Box p='2'>
             <Heading size='lg' as='h1' style={{marginLeft: '38px', cursor: "pointer"}} onClick={()=>setSelection(0)}>
-                <img src={require("../../assets/icons/JPV.png")} style={{height: '60px'}}/>
+                <img src={require("../../assets/icons/JPV.png")} alt="website logo" style={{height: '40px'}}/>
             </Heading>
             </Box>
             <Spacer />
             <Menu>
             {({ isOpen }) => (
                 <>
-                <MenuButton isActive={isOpen} style={{margin: '30px', cursor: "pointer", color:'white', background: 'black'}}>{isOpen ? `x` : `=`}</MenuButton>
+                <MenuButton isActive={isOpen} style={{margin: '30px', marginTop: "10px", cursor: "pointer", color:'white', background: 'black', borderColor: "black"}}>{isOpen ? `X` : `=`}</MenuButton>
                 <MenuList> 
-                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black'}} onClick={()=>setSelection(1)}>About</MenuItem>
-                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black'}} onClick={()=>setSelection(2)}>Experience</MenuItem>
-                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black'}} onClick={()=>setSelection(3)}>Projects</MenuItem>
-                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black'}} onClick={()=>setSelection(4)}>Resume</MenuItem>
+                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black', fontWeight: '600'}} onClick={()=>window.open("https://jpvalera.carrd.co/")}>About</MenuItem>
+                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black', fontWeight: '600'}} onClick={()=>setSelection(2)}>Experience</MenuItem>
+                    <MenuItem style={{cursor: "pointer", color:'white', background: 'black', fontWeight: '600'}} onClick={()=>setSelection(3)}>Projects</MenuItem>
+                    <MenuItem style={{cursor: "pointer", color:'black', background: 'white', borderColor: 'white', paddingLeft: '5px', paddingRight: '5px', textDecoration: 'none', fontWeight: '600'}} href="mailto:johnpatrickyusoresvalera@gmail.com">CONTACT</MenuItem>
                 </MenuList>
                 </>
             )}
