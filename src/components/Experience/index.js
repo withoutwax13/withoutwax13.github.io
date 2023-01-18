@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 const experienceTextForDesktop = [
-    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
         <Highlight
             query={['917Venture/KodeGo Fullstack PHP Bootcamp', 'Upskilled', 'expanded network']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
@@ -11,7 +11,7 @@ const experienceTextForDesktop = [
             Upskilled and expanded network by graduating on 917Venture/KodeGo Fullstack PHP Bootcamp program.
         </Highlight>
     </Heading>,
-    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
         <Highlight
             query={['BS Mechanical Engineering']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
@@ -19,7 +19,7 @@ const experienceTextForDesktop = [
             Graduated on Bicol State College of Applied Sciences and Technology with a degree on BS Mechanical Engineering.
         </Highlight>
     </Heading>,
-    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
         <Highlight
             query={['focus on freelance business', 'Quantrics Enterprise, Inc.']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
@@ -28,15 +28,15 @@ const experienceTextForDesktop = [
         </Highlight>
         
     </Heading>,
-    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
         <Highlight
             query={['Quantrics Enterprise, Inc.']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
         >
-            Joined Quantrics Enterprise, Inc. as a Customer Service Representative.
+            Joined Quantrics Enterprise, Inc.
         </Highlight>
     </Heading>,
-    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
         <Highlight
             query={['software development services']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
@@ -78,7 +78,7 @@ const experienceTextForNonDesktop = [
             query={['Quantrics Enterprise, Inc.']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
         >
-            Joined Quantrics Enterprise, Inc. as a Customer Service Representative.
+            Joined Quantrics Enterprise, Inc.
         </Highlight>
     </Heading>,
     <Heading as="h3" fontSize="12px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
@@ -93,7 +93,7 @@ const experienceTextForNonDesktop = [
 ]
 
 function Desktop() {
-    const [activeNavIndex, setActiveNavIndex] = useState(0)
+    const [activeNavIndex, setActiveNavIndex] = useState(1)
     return (
         <Grid 
             style={{
@@ -111,8 +111,7 @@ function Desktop() {
                 colSpan={1}
                 rowSpan={3}
             >
-                <VStack direction='column' align='center'>
-                    <Button as="p" onClick={()=>setActiveNavIndex(0)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 0 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Nov 2022</Button>
+                <VStack direction='column' align='center' position='fixed'>
                     <Button as="p" onClick={()=>setActiveNavIndex(1)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 1 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Apr 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(2)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 2 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Jul 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(3)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 3 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Oct 2021</Button>
@@ -130,7 +129,7 @@ function Desktop() {
 }
 
 const NonDesktop = () => {
-    const [activeNavIndex, setActiveNavIndex] = useState(0)
+    const [activeNavIndex, setActiveNavIndex] = useState(1)
     return (
         <Grid 
             style={{
@@ -149,7 +148,6 @@ const NonDesktop = () => {
                 rowSpan={3}
             >
                 <VStack direction='column' align='center'>
-                    <Button as="p" onClick={()=>setActiveNavIndex(0)} fontSize="20px" fontFamily="Calibri" style={{color: `${activeNavIndex === 0 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Nov 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(1)} fontSize="20px" fontFamily="Calibri" style={{color: `${activeNavIndex === 1 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Apr 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(2)} fontSize="20px" fontFamily="Calibri" style={{color: `${activeNavIndex === 2 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Jul 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(3)} fontSize="20px" fontFamily="Calibri" style={{color: `${activeNavIndex === 3 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Oct 2021</Button>
