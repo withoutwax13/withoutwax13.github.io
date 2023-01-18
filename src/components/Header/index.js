@@ -1,6 +1,6 @@
 import { Flex, Spacer, Box, ButtonGroup, Heading, Link, MenuItem, Menu, MenuButton, MenuList } from "@chakra-ui/react"
 
-const Desktop = ({setSelection}) => {
+const Desktop = ({setSelection, currentPage}) => {
     return (
         <Flex style={{
             zIndex: '5',
@@ -17,15 +17,15 @@ const Desktop = ({setSelection}) => {
             <Spacer />
             <ButtonGroup gap='2'>
                 <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600'}} onClick={()=>window.open("https://jpvalera.carrd.co/")}>About</Link>
-                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600'}} onClick={()=>setSelection(2)}>Experience</Link>
-                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600'}} onClick={()=>setSelection(3)}>Projects</Link>
+                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600', textDecoration: currentPage === 2 ? 'underline' : 'none', textDecorationColor: currentPage === 2 ? 'yellow' : 'transparent'}} onClick={()=>setSelection(2)}>Experience</Link>
+                <Link style={{margin: '30px', cursor: "pointer", fontWeight: '600', textDecoration: currentPage === 3 ? 'underline' : 'none', textDecorationColor: currentPage === 3 ? 'yellow' : 'transparent'}} onClick={()=>setSelection(3)}>Projects</Link>
                 <Link style={{margin: '30px', cursor: "pointer", color:'black', background: 'white', borderColor: 'white', paddingLeft: '5px', paddingRight: '5px', textDecoration: 'none', fontWeight: '600'}} href="mailto:johnpatrickyusoresvalera@gmail.com">CONTACT</Link>
             </ButtonGroup>
         </Flex>
     )
 }
 
-const NonDesktop = ({setSelection}) => {
+const NonDesktop = ({setSelection, currentPage}) => {
     return (
         <Flex style={{
             zIndex: '10',
@@ -57,10 +57,10 @@ const NonDesktop = ({setSelection}) => {
     )
 }
 
-const Header = ({setSelection}) => {
+const Header = ({setSelection, currentPage}) => {
     var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const renderHeader = () => {
-        return deviceWidth > 1280 ? <Desktop setSelection={setSelection}/> : <NonDesktop setSelection={setSelection}/>
+        return deviceWidth > 1280 ? <Desktop setSelection={setSelection} currentPage={currentPage}/> : <NonDesktop setSelection={setSelection} currentPage={currentPage}/>
     }
     return renderHeader()
 }

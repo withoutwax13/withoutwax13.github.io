@@ -8,10 +8,15 @@ import Portfolio from "./components/Portfolio"
 
 const App = () => {
   const [navSelection, setNavSelection] = useState(0) // to determine which header navlink is active; default should be the Home page as 0
-  const pageComponents = [<Home setSelection={setNavSelection}/>, <About setSelection={setNavSelection}/>, <Experience setSelection={setNavSelection}/>, <Portfolio setSelection={setNavSelection}/>]
+  const pageComponents = [
+    <Home setSelection={setNavSelection}/>, 
+    <About setSelection={setNavSelection}/>, 
+    <Experience setSelection={setNavSelection}/>, 
+    <Portfolio setSelection={setNavSelection}/>
+  ]
   return (
     <div>
-      <Header setSelection={setNavSelection}/>
+      <Header setSelection={setNavSelection} currentPage={navSelection}/>
       {pageComponents[navSelection]}
       <Canvas/>
     </div>
