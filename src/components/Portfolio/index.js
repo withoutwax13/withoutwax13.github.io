@@ -1,4 +1,5 @@
 import { Card, CardBody, Image, Stack, Heading, Text, ButtonGroup, Button, CardFooter, Divider, Grid, GridItem } from "@chakra-ui/react";
+import { useEffect } from 'react';
 
 function ProjectCard({title, desc, techStack, projectLink, repoLink}){
     return (
@@ -169,6 +170,9 @@ const NonDesktop = () => {
 }
 
 const Portfolio = () => {
+    useEffect(()=>{
+        document.title = 'Portfolio | John Patrick Valera | Full Stack Developer'
+    })
     var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const renderPortfolio = () => {
         return deviceWidth > 1280 ? <Desktop /> : <NonDesktop />

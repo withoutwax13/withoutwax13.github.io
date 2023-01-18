@@ -1,5 +1,5 @@
 import { Button, Heading, VStack, Grid, GridItem, Highlight} from '@chakra-ui/react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const experienceTextForDesktop = [
@@ -165,6 +165,9 @@ const NonDesktop = () => {
 }
 
 const Experience = () => {
+    useEffect(()=>{
+        document.title = 'Experience | John Patrick Valera | Full Stack Developer'
+    })
     var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const renderExperience = () => {
         return deviceWidth > 1280 ? <Desktop /> : <NonDesktop />

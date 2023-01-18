@@ -1,4 +1,5 @@
 import { Button, Heading, Stack } from '@chakra-ui/react'
+import { useEffect } from 'react';
 
 const Desktop = ({setSelection}) => {
     return(
@@ -41,6 +42,9 @@ const NonDesktop = ({setSelection}) => {
 }
 
 const Home = ({setSelection}) => {
+    useEffect(()=>{
+        document.title = 'John Patrick Valera | Full Stack Developer'
+    })
     var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const renderHome = () => {
         return deviceWidth > 1280 ? <Desktop setSelection={setSelection}/> : <NonDesktop setSelection={setSelection}/>
