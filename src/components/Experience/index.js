@@ -33,7 +33,7 @@ const experienceTextForDesktop = [
             query={['Quantrics Enterprise, Inc.']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
         >
-            Joined Quantrics Enterprise, Inc.
+            Joined Quantrics Enterprise, Inc. as Customer Service Representative
         </Highlight>
     </Heading>,
     <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
@@ -41,9 +41,25 @@ const experienceTextForDesktop = [
             query={['software development services']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
         >
-            Started freelance business providing software development services.
+            Started freelancing business providing software development services as a consultant.
         </Highlight>
         
+    </Heading>,
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
+        <Highlight
+            query={['Collabera Technologies Private Limited Inc', 'Automation QA Engineer']}
+            styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
+        >
+            Joined Collabera Technologies Private Limited Inc as an Automation QA Engineer
+        </Highlight>
+    </Heading>,
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
+        <Highlight
+            query={['The Alex Haigh Group', 'Technology and Operations Consultant']}
+            styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
+        >
+            Joined The Alex Haigh Group as Technology and Operations Consultant
+        </Highlight>
     </Heading>,
 ]
 
@@ -78,7 +94,7 @@ const experienceTextForNonDesktop = [
             query={['Quantrics Enterprise, Inc.']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
         >
-            Joined Quantrics Enterprise, Inc.
+            Joined Quantrics Enterprise, Inc. as Customer Service Representative
         </Highlight>
     </Heading>,
     <Heading as="h3" fontSize="12px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', paddingRight: '30px'}}>
@@ -86,9 +102,25 @@ const experienceTextForNonDesktop = [
             query={['software development services']}
             styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
         >
-            Started freelance business providing software development services.
+            Started freelancing business providing software development services as a consultant.
         </Highlight>
         
+    </Heading>,
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
+        <Highlight
+            query={['Collabera Technologies Private Limited Inc', 'Automation QA Engineer']}
+            styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
+        >
+            Joined Collabera Technologies Private Limited Inc as an Automation QA Engineer
+        </Highlight>
+    </Heading>,
+    <Heading as="h3" fontSize="40px" fontFamily="Calibri" style={{color: "white", paddingTop: '30px', marginRight: '100px',}}>
+        <Highlight
+            query={['The Alex Haigh Group', 'Technology and Operations Consultant']}
+            styles={{ px: '2', py: '1', rounded: 'full', bg: 'teal.100' }}
+        >
+            Joined The Alex Haigh Group as Technology and Operations Consultant
+        </Highlight>
     </Heading>,
 ]
 
@@ -112,6 +144,8 @@ function Desktop() {
                 rowSpan={3}
             >
                 <VStack direction='column' align='center' position='fixed'>
+                    <Button as="p" onClick={()=>setActiveNavIndex(5)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 5 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Mar 2023</Button>
+                    <Button as="p" onClick={()=>setActiveNavIndex(6)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 6 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Aug 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(1)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 1 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Apr 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(2)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 2 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Jul 2022</Button>
                     <Button as="p" onClick={()=>setActiveNavIndex(3)} fontSize="50px" fontFamily="Calibri" style={{color: `${activeNavIndex === 3 ? 'white' : '#AE8898'}`, cursor: 'pointer', margin: '0.5rem'}}>Oct 2021</Button>
