@@ -125,7 +125,7 @@ const experienceTextForNonDesktop = [
 ]
 
 function Desktop() {
-    const [activeNavIndex, setActiveNavIndex] = useState(1)
+    const [activeNavIndex, setActiveNavIndex] = useState(5)
     return (
         <Grid 
             style={{
